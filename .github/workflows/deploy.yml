@@ -26,9 +26,10 @@ jobs:
         with:
           hugo-version: "latest"
 
-      - uses: actions/configure-pages@v5
+      - id: configure
+        uses: actions/configure-pages@v5
 
-      - run: hugo --minify --baseURL "${{ steps.deployment.outputs.page_url }}"
+      - run: hugo --minify --baseURL "${{ steps.configure.outputs.base_url }}"
 
       - uses: actions/upload-pages-artifact@v3
         with:
