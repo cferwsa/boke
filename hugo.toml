@@ -1,0 +1,30 @@
+baseURL = "https://cferwsa.github.io/boke/"
+languageCode = "zh-CN"
+title = "里昂的博客"
+theme = "PaperMod"
+defaultContentLanguage = "zh"
+
+[params]
+  env = "production"
+  description = "里昂的博客"
+  author = "里昂"
+
+  [params.homeInfoParams]
+    Title = "你好 👋"
+    Content = "欢迎来到我的博客"
+
+[taxonomies]
+  tag = "tags"
+  author = "authors"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 20
